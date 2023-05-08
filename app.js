@@ -1,5 +1,6 @@
 // variables
-
+// const cartDOM = document.querySelector(".cart");
+// const cartOverlay = document.querySelector(".cart-overlay");
 let cart = [];
 
 class Products {
@@ -20,24 +21,29 @@ class Products {
     }
 }
 
+function showCart() {
+    cartOverlay.classList.add("transparent-bcg");
+    cartDOM.classList.add("show-cart");
+    console.log("add");
+}
+
 // ui
 class UI {
     showCart() {
-        const cartOverlay = document.querySelector(".cart-overlay");
-        const cartDOM = document.querySelector(".cart");
-        console.log("show cart");
+        const cartDOM = document.querySelector("#cart");
+        const cartOverlay = document.querySelector("#cart-overlay");
         cartOverlay.classList.add("transparent-bcg");
         cartDOM.classList.add("show-cart");
     }
     hideCart() {
-        const cartOverlay = document.querySelector(".cart-overlay");
-        const cartDOM = document.querySelector(".cart");
+        const cartOverlay = document.querySelector("#cart-overlay");
+        const cartDOM = document.querySelector("#cart");
         cartOverlay.classList.remove("transparent-bcg");
         cartDOM.classList.remove("show-cart");
     }
     initializeApp() {
-        const cartButton = document.querySelector(".cart-btn");
-        const closeCartButton = document.querySelector(".cart-btn");
+        const cartButton = document.querySelector("#cart-btn");
+        const closeCartButton = document.querySelector("#close-cart");
         cartButton.addEventListener("click", this.showCart);
         closeCartButton.addEventListener("click", this.hideCart);
     }

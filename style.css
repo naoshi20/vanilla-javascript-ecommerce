@@ -195,7 +195,6 @@ body {
 }
 .show-cart {
     transform: translateX(0);
-    background-color: red;
 }
 .transparent-bcg {
     visibility: visible;
@@ -263,3 +262,7 @@ body {
 }
 
 /* --------------- End of Cart ---------------- */
+
+.test {
+    background-color: red;
+}
